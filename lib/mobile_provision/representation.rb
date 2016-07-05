@@ -9,10 +9,6 @@ module MobileProvision
     CERTIFICATE_KEY = 'DeveloperCertificates'
     INHOUSE_PROFILE_KEY = 'ProvisionsAllDevices'
     ADHOC_PROFILE_KEY = 'ProvisionedDevices'
-    AD_HOC_TYPE = 1
-    IN_HOUSE_TYPE = 2
-    APPLE_STORE_TYPE = 3
-    PROFILE_ERROR_TYPE = 99
 
     attr_reader :expiration_date, :bundle_id, :certificate, :profile_type, :registered_udids
 

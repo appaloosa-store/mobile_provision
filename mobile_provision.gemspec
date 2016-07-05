@@ -27,7 +27,6 @@ Gem::Specification.new do |s|
    |.*\.eps
    )$}x
  end
- s.test_files = ['spec/representation_spec.rb']
  s.executables = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
  s.extra_rdoc_files = %w(LICENSE README.md)
  s.homepage = 'http://github.com/appaloosa-store/mobile_provision'

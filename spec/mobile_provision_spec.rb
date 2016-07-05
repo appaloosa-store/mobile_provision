@@ -1,10 +1,10 @@
 # encoding: utf-8
 require 'spec_helper'
-require 'mobile_provision/representation'
+require 'mobile_provision'
 
-describe MobileProvision::Representation, type: :model do
+describe MobileProvision, type: :model do
   def mobile_provision_representation(mobile_provision_file)
-    MobileProvision::Representation.new(StringIO.new(mobile_provision_file))
+    MobileProvision.new(StringIO.new(mobile_provision_file))
   end
 
   describe 'initialize' do
@@ -21,16 +21,16 @@ describe MobileProvision::Representation, type: :model do
     describe 'profile type' do
       context 'in house' do
         let(:mobile_prov) { mobile_provision_representation(PROFILE) }
-        it { expect(mobile_prov.profile_type).to eq MobileProvision::Representation::IN_HOUSE_TYPE }
+        it { expect(mobile_prov.profile_type).to eq MobileProvision::IN_HOUSE_TYPE }
       end
       context 'ad hoc' do
         let(:mobile_prov) { mobile_provision_representation(AD_HOC) }
-        it { expect(mobile_prov.profile_type).to eq MobileProvision::Representation::AD_HOC_TYPE }
+        it { expect(mobile_prov.profile_type).to eq MobileProvision::AD_HOC_TYPE }
       end
       context 'unknown' do
         let(:profile) { File.new('spec/fixtures/unknown.mobileprovision') }
         let(:mobile_prov) { mobile_provision_representation(profile.read) }
-        it { expect(mobile_prov.profile_type).to eq MobileProvision::Representation::PROFILE_ERROR_TYPE }
+        it { expect(mobile_prov.profile_type).to eq MobileProvision::PROFILE_ERROR_TYPE }
       end
     end
 

@@ -26,12 +26,12 @@ Usage
 ---
 
 ```
-file = File.new(path_to_mobile_prov).read
-mobile_provision_file = StringIO.new(file)
-mobile_provision = MobileProvision::Representation.new(mobile_provision_file)
+mobile_provision_file = File.open(path_to_mobile_prov)
+mobile_provision = MobileProvision.new(mobile_provision_file)
 p mobile_provision.expiration_date
 p mobile_provision.profile_type # => either ad-hoc, in house, apple store or in error
 p mobile_provision.registered_udids if mobile_provision.profile_type == AD_HOC
+mobile_provision_file.close
 ```
 
 Extractible info
