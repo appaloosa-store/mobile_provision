@@ -1,4 +1,4 @@
-MobileProvision
+MobileProvision [![Build Status](https://travis-ci.org/appaloosa-store/mobile_provision.svg?branch=master)](https://travis-ci.org/appaloosa-store/mobile_provision)
 ===
 
 MobileProvision is a simple Mobile Provision wrapper written in Ruby.
