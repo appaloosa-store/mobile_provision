@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 require 'cfpropertylist'
-module Weaver
-  class MobileProvision
+
+module MobileProvision
+  class Representation
     EXPIRATION_DATE_KEY = 'ExpirationDate'
     ENTITLEMENTS_KEY = 'Entitlements'
     BUNDLE_ID_KEY = 'application-identifier'
