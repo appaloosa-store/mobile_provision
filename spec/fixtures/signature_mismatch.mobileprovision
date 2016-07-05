@@ -1,0 +1,86 @@
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppIDName</key>
+	<string>myAppId</string>
+	<key>ApplicationIdentifierPrefix</key>
+	<array>
+	<string>MyTeamId</string>
+	</array>
+	<key>CreationDate</key>
+	<date>2016-03-16T10:39:20Z</date>
+	<key>Platform</key>
+	<array>
+		<string>iOS</string>
+	</array>
+	<key>DeveloperCertificates</key>
+	<array>
+		<data>
+MIIFYTCCBEmgAwIBAgIIE2dEQnEfQkUwDQYJKoZIhvcNAQEFBQAwgZYxCzAJ
+BgNVBAYTAlVTMRMwEQYDVQQKDApBcHBsZSBJbmMuMSwwKgYDVQQLDCNBcHBs
+ZSBXb3JsZHdpZGUgRGV2ZWxvcGVyIFJlbGF0aW9uczFEMEIGA1UEAww7QXBw
+bGUgV29ybGR3aWRlIERldmVsb3BlciBSZWxhdGlvbnMgQ2VydGlmaWNhdGlv
+biBBdXRob3JpdHkwHhcNMTAwMzAyMDgxMTUwWhcNMTEwMzAyMDgxMTUwWjBV
+MRowGAYKCZImiZPyLGQBAQwKM0ZaUjdMSExDUTEqMCgGA1UEAwwhaVBob25l
+IERpc3RyaWJ1dGlvbjogS3l1Y2hhbmcgTGVlMQswCQYDVQQGEwJVUzCCASIw
+DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOyjdClvqhtQ1+IjBUIC1JD2
+TXRq5V62G6HZQbPZA6MejeKSzuN5cCp8FEWlCWmcRKUK3c3C863sm5NN7s+p
+ruq34b+quAncihBIYBoq0iasWwK5bduTn6en4bUN+SOG9KcqjFzUHKG1daCu
+brfwMfGbdaEt3suBUC0wEENAZ8gefGiGCoiiUS4ui0YfgmczUAdY5eKOVfY6
+0NxkC7N1UD1b5jgEiKQO1+dR+OIyyFGHVNEkGrX7UA6JMKL6DiC8BKMsRUvO
+MAWK2cL9n98WNMrEyxH4gYMinv3CjJwQK3JuO3ghw/ZjXK0e1ugU5W3/Q4vs
+s1OGnSvPy6eOOZYXiOkCAwEAAaOCAfEwggHtMAwGA1UdEwEB/wQCMAAwFgYD
+VR0lAQH/BAwwCgYIKwYBBQUHAwMwHwYDVR0jBBgwFoAUiCcXCam2GGCL7Ou6
+9kdZxVJUo7cwTQYDVR0fBEYwRDBCoECgPoY8aHR0cDovL2RldmVsb3Blci5h
+cHBsZS5jb20vY2VydGlmaWNhdGlvbmF1dGhvcml0eS93d2RyY2EuY3JsMA4G
+A1UdDwEB/wQEAwIHgDAdBgNVHQ4EFgQUGiSvQSAdEB+L+PHquqrn0aFVihQw
+ggEPBgNVHSAEggEGMIIBAjCB/wYJKoZIhvdjZAUBMIHxMIHDBggrBgEFBQcC
+AjCBtgyBs1JlbGlhbmNlIG9uIHRoaXMgY2VydGlmaWNhdGUgYnkgYW55IHBh
+cnR5IGFzc3VtZXMgYWNjZXB0YW5jZSBvZiB0aGUgdGhlbiBhcHBsaWNhYmxl
+IHN0YW5kYXJkIHRlcm1zIGFuZCBjb25kaXRpb25zIG9mIHVzZSwgY2VydGlm
+aWNhdGUgcG9saWN5IGFuZCBjZXJ0aWZpY2F0aW9uIHByYWN0aWNlIHN0YXRl
+bWVudHMuMCkGCCsGAQUFBwIBFh1odHRwOi8vd3d3LmFwcGxlLmNvbS9hcHBs
+ZWNhLzATBgoqhkiG92NkBgEEAQH/BAIFADANBgkqhkiG9w0BAQUFAAOCAQEA
+JhEH/ZjHPQdtDP0KNu+Uth463syesVZPAyRbMVuuHYI5bFaEulyDc+1aHDo2
+x3y28YdsoT5PWaqVp37UQhDBLUS6/nYR6rC2sJs9WQ6GJX1EpXRQC9JIgOYF
+VlYXxhjg/iH4/uIGy8SAy3GB/ZE3Jg9l02xSq/OYWwAB2mqe0GpO7iB17Ka+
+BQ+m4btmuvHNC8+IMB4BfaPrKRYci9Iy7YzRahydv0F1kBrSPkwjPo0vBkBT
+XqO5Ef9MXyRspI8DaJZk1SFQwrdjJ0WpT01A50iqC3HDkpM7ON263ledmkIZ
+nfTWZ1pyiY/uWL6vDzoGn2f7CldK6BvAKQxPlXg3MA==</data>
+	</array>
+	<key>Entitlements</key>
+	<dict>
+		<key>keychain-access-groups</key>
+		<array>
+			<string>MyTeamId.*</string>
+		</array>
+		<key>get-task-allow</key>
+		<false/>
+		<key>application-identifier</key>
+		<string>MyTeamId.com.appaloosa.weaver</string>
+		<key>com.apple.developer.team-identifier</key>
+		<string>MyTeamId</string>
+		<key>aps-environment</key>
+		<string>production</string>
+
+	</dict>
+	<key>ExpirationDate</key>
+	<date>2017-03-16T10:39:20Z</date>
+	<key>Name</key>
+	<string>Mismatching Signature</string>
+	<key>ProvisionsAllDevices</key>
+	<true/>
+	<key>TeamIdentifier</key>
+	<array>
+		<string>MyTeamId</string>
+	</array>
+	<key>TeamName</key>
+	<string>Appaloosa</string>
+	<key>TimeToLive</key>
+	<integer>365</integer>
+	<key>UUID</key>
+	<string>my-UUID-For-The-Win</string>
+	<key>Version</key>
+	<integer>1</integer>
+</dict>
+</plist>

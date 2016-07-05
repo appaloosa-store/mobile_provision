@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AppIDName</key>
+	<string>MyAppId</string>
+	<key>ApplicationIdentifierPrefix</key>
+	<array>
+	<string>MyTeamId</string>
+	</array>
+	<key>CreationDate</key>
+	<date>2016-03-17T15:46:28Z</date>
+	<key>Platform</key>
+	<array>
+		<string>iOS</string>
+	</array>
+	<key>DeveloperCertificates</key>
+	<array>
+		<data>certificate+key</data>
+	</array>
+	<key>Entitlements</key>
+	<dict>
+		<key>keychain-access-groups</key>
+		<array>
+			<string>MyTeamId.*</string>
+		</array>
+		<key>get-task-allow</key>
+		<false/>
+		<key>application-identifier</key>
+		<string>MyTeamId.com.appaloosa.weaver</string>
+		<key>com.apple.developer.team-identifier</key>
+		<string>MyTeamId</string>
+		<key>aps-environment</key>
+		<string>production</string>
+
+	</dict>
+	<key>ExpirationDate</key>
+	<date>2017-03-17T15:46:28Z</date>
+	<key>Name</key>
+	<string>test</string>
+	<key>ProvisionedDevices</key>
+	<array>
+		<string>oneDeviceUDID</string>
+	</array>
+	<key>TeamIdentifier</key>
+	<array>
+		<string>MyTeamId</string>
+	</array>
+	<key>TeamName</key>
+	<string>Appaloosa</string>
+	<key>TimeToLive</key>
+	<integer>365</integer>
+	<key>UUID</key>
+	<string>my-UUID-For-The-Win</string>
+	<key>Version</key>
+	<integer>1</integer>
+</dict>
+</plist>
