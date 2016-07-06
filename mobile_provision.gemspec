@@ -25,6 +25,7 @@ Gem::Specification.new do |s|
    |\.rubocop.yml
    |\.rubocop_todo.yml
    |.*\.eps
+   |\.travis.yml
    )$}x
  end
  s.executables = s.files.grep(%r{^bin/}) { |f| File.basename(f) }
