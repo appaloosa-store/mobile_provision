@@ -5,20 +5,22 @@ module MobileProvision
   class Representation
     EXPIRATION_DATE_KEY = 'ExpirationDate'
     ENTITLEMENTS_KEY = 'Entitlements'
-    BUNDLE_ID_KEY = 'application-identifier'
+    APP_ID_KEY = 'application-identifier'
     CERTIFICATE_KEY = 'DeveloperCertificates'
     INHOUSE_PROFILE_KEY = 'ProvisionsAllDevices'
     ADHOC_PROFILE_KEY = 'ProvisionedDevices'
+    TEAM_ID_KEY = 'com.apple.developer.team-identifier'
 
-    attr_reader :expiration_date, :bundle_id, :certificate, :profile_type, :registered_udids
+    attr_reader :expiration_date, :app_id, :certificate, :profile_type, :registered_udids, :team_id
 
     def initialize(file)
       read!(file)
       @expiration_date = build_expiration_date
       @certificate = build_certificate
-      @bundle_id = build_bundle_id
+      @app_id = build_app_id
       @profile_type = build_profile_type
       @registered_udids = build_registered_udids
+      @team_id = build_team_id
     end
 
     private
@@ -68,9 +70,9 @@ module MobileProvision
       Time.parse(expiration_date.to_s).utc
     end
 
-    def build_bundle_id
+    def build_app_id
       entitlements = read_plist_value(ENTITLEMENTS_KEY)
-      read_plist_value(BUNDLE_ID_KEY, entitlements)
+      read_plist_value(APP_ID_KEY, entitlements)
     end
 
     def build_certificate
@@ -92,6 +94,11 @@ module MobileProvision
     def build_registered_udids
       return nil unless @profile_type == AD_HOC_TYPE
       read_plist_value(ADHOC_PROFILE_KEY)
+    end
+
+    def build_team_id
+      entitlements = read_plist_value(ENTITLEMENTS_KEY)
+      read_plist_value(TEAM_ID_KEY, entitlements)
     end
   end
 end
