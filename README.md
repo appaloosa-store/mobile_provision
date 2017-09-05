@@ -38,11 +38,12 @@ Extractible info
 ---
 Currently, we can extract:
 
-+ expiration date
-+ bundle id
++ expiration_date
++ app_id
++ team_id
 + certificate
-+ profile type
-+ registered UDIDs in case of an Ad-Hoc type
++ profile_type
++ registered_udids in case of an Ad-Hoc type
 
 Contributing
 ---
@@ -51,3 +52,9 @@ Contributing
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
 5. Create a new Pull Request
+
+Update
+---
+
+If you installed this gem before 2017-09-05, please note that `bundle_id` has been renamed `app_id`
+In case of bug, please consider reviewing this change in code.
