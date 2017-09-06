@@ -11,12 +11,14 @@ describe MobileProvision, type: :model do
     PROFILE = File.new('spec/fixtures/signature_mismatch.mobileprovision').read.freeze
     AD_HOC = File.new('spec/fixtures/adhoc.mobileprovision').read.freeze
 
-    describe 'expiration date, certificate, app id and team id' do
+    describe 'expiration date, certificate, app id, team id and bundle id' do
       let(:mobile_prov) { mobile_provision_representation(PROFILE) }
       it { expect(mobile_prov.expiration_date).to eq Time.parse('2017-03-16 10:39:20.000000000 +0000') }
       it { expect(mobile_prov.certificate).to eq File.new('spec/fixtures/certificate_key.txt').read }
       it { expect(mobile_prov.app_id).to eq 'MyTeamId.com.appaloosa.weaver' }
       it { expect(mobile_prov.team_id).to eq 'MyTeamId' }
+      it { expect(mobile_prov.bundle_id).to eq 'com.appaloosa.weaver' }
+      it { expect(mobile_prov.app_id).to eq "#{mobile_prov.team_id}.#{mobile_prov.bundle_id}" }
     end
 
     describe 'profile type' do

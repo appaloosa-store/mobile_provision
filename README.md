@@ -41,6 +41,7 @@ Currently, we can extract:
 + expiration_date
 + app_id
 + team_id
++ bundle_id
 + certificate
 + profile_type
 + registered_udids in case of an Ad-Hoc type

@@ -11,7 +11,7 @@ module MobileProvision
     ADHOC_PROFILE_KEY = 'ProvisionedDevices'
     TEAM_ID_KEY = 'com.apple.developer.team-identifier'
 
-    attr_reader :expiration_date, :app_id, :certificate, :profile_type, :registered_udids, :team_id
+    attr_reader :expiration_date, :app_id, :certificate, :profile_type, :registered_udids, :team_id, :bundle_id
 
     def initialize(file)
       read!(file)
@@ -21,6 +21,7 @@ module MobileProvision
       @profile_type = build_profile_type
       @registered_udids = build_registered_udids
       @team_id = build_team_id
+      @bundle_id = build_bundle_id
     end
 
     private
@@ -99,6 +100,10 @@ module MobileProvision
     def build_team_id
       entitlements = read_plist_value(ENTITLEMENTS_KEY)
       read_plist_value(TEAM_ID_KEY, entitlements)
+    end
+
+    def build_bundle_id
+      build_app_id[/(?<=\.).*/]
     end
   end
 end
