@@ -54,8 +54,9 @@ Contributing
 4. Push to the branch (git push origin my-new-feature)
 5. Create a new Pull Request
 
-Update
+2.0.0 -2017-09-06
 ---
 
-If you installed this gem before 2017-09-05, please note that `bundle_id` has been renamed `app_id`
-In case of bug, please consider reviewing this change in code.
++ Changed: `bundle_id` has been renamed `app_id` for the application identifier
++ Added: `team_id` is now available
++ Added: `bundle_id` is now available from `app_id` extraction
