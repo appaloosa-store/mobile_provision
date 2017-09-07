@@ -10,8 +10,9 @@ module MobileProvision
     INHOUSE_PROFILE_KEY = 'ProvisionsAllDevices'
     ADHOC_PROFILE_KEY = 'ProvisionedDevices'
     TEAM_ID_KEY = 'com.apple.developer.team-identifier'
+    HAS_ASSOCIATED_DOMAINS = 'com.apple.developer.associated-domains'
 
-    attr_reader :expiration_date, :app_id, :certificate, :profile_type, :registered_udids, :team_id, :bundle_id
+    attr_reader :expiration_date, :app_id, :certificate, :profile_type, :registered_udids, :team_id, :bundle_id, :has_associated_domains
 
     def initialize(file)
       read!(file)
@@ -22,6 +23,7 @@ module MobileProvision
       @registered_udids = build_registered_udids
       @team_id = build_team_id
       @bundle_id = build_bundle_id
+      @has_associated_domains = has_associated_domains?
     end
 
     private
@@ -104,6 +106,11 @@ module MobileProvision
 
     def build_bundle_id
       build_app_id[/(?<=\.).*/]
+    end
+
+    def has_associated_domains?
+      entitlements = read_plist_value(ENTITLEMENTS_KEY)
+      read_plist_value(HAS_ASSOCIATED_DOMAINS, entitlements).kind_of? String
     end
   end
 end

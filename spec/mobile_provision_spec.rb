@@ -21,6 +21,21 @@ describe MobileProvision, type: :model do
       it { expect(mobile_prov.app_id).to eq "#{mobile_prov.team_id}.#{mobile_prov.bundle_id}" }
     end
 
+    describe 'associated domains' do
+      HAS_ASSOCIATED_DOMAINS = File.new('spec/fixtures/has_associated_domains.mobileprovision').read.freeze
+      NO_ASSOCIATED_DOMAINS = File.new('spec/fixtures/no_associated_domains.mobileprovision').read.freeze
+
+      context 'there is associated domains' do
+        let(:mobile_prov) { mobile_provision_representation(HAS_ASSOCIATED_DOMAINS) }
+        it { expect(mobile_prov.has_associated_domains).to eq true }
+      end
+
+      context 'there is no associated domains' do
+        let(:mobile_prov) { mobile_provision_representation(NO_ASSOCIATED_DOMAINS) }
+        it { expect(mobile_prov.has_associated_domains).to eq false }
+      end
+    end
+
     describe 'profile type' do
       context 'in house' do
         let(:mobile_prov) { mobile_provision_representation(PROFILE) }

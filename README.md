@@ -45,6 +45,7 @@ Currently, we can extract:
 + certificate
 + profile_type
 + registered_udids in case of an Ad-Hoc type
++ has_associated_domains
 
 Contributing
 ---
@@ -60,3 +61,4 @@ Contributing
 + Changed: `bundle_id` has been renamed `app_id` for the application identifier
 + Added: `team_id` is now available
 + Added: `bundle_id` is now available from `app_id` extraction
++ Added: `has_associated_domains` is available
