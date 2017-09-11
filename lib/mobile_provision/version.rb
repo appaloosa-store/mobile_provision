@@ -4,7 +4,7 @@
 module MobileProvision
   # This module holds the MobileProvision version information.
   module Version
-    STRING = '1.1.1'
+    STRING = '2.0.0'
 
     module_function
 

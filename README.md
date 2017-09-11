@@ -38,11 +38,14 @@ Extractible info
 ---
 Currently, we can extract:
 
-+ expiration date
-+ bundle id
++ expiration_date
++ app_id
++ team_id
++ bundle_id
 + certificate
-+ profile type
-+ registered UDIDs in case of an Ad-Hoc type
++ profile_type
++ registered_udids in case of an Ad-Hoc type
++ has_associated_domains
 
 Contributing
 ---
@@ -51,3 +54,11 @@ Contributing
 3. Commit your changes (git commit -am 'Add some feature')
 4. Push to the branch (git push origin my-new-feature)
 5. Create a new Pull Request
+
+2.0.0 -2017-09-06
+---
+
++ Changed: `bundle_id` has been renamed `app_id` for the application identifier
++ Added: `team_id` is now available
++ Added: `bundle_id` is now available from `app_id` extraction
++ Added: `has_associated_domains` is available
