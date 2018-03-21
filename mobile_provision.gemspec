@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
  s.name = 'mobile_provision'
  s.version = MobileProvision::Version::STRING
  s.platform = Gem::Platform::RUBY
- s.required_ruby_version = '>= 1.9.3'
+ s.required_ruby_version = '>= 2.2.0'
  s.authors = ['Alexandre Ignjatovic', 'Robin Sfez', 'Benoit Tigeot', 'Christophe Valentin']
  s.description = <<-EOF
    MobileProvision is a convenient Mobile Provision wrapper written in Ruby.
