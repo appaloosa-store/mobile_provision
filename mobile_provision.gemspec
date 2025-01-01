@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
  s.name = 'mobile_provision'
  s.version = MobileProvision::Version::STRING
  s.platform = Gem::Platform::RUBY
- s.required_ruby_version = '>= 2.2.0'
+ s.required_ruby_version = '>= 3.3.0'
  s.authors = ['Alexandre Ignjatovic', 'Robin Sfez', 'Benoit Tigeot', 'Christophe Valentin']
  s.description = <<-EOF
    MobileProvision is a convenient Mobile Provision wrapper written in Ruby.
@@ -37,7 +37,7 @@ Gem::Specification.new do |s|
 
  s.summary = 'MobileProvision is a convenient Mobile Provision wrapper written in Ruby.'
 
- s.add_development_dependency('rspec', '~> 3.4')
+ s.add_development_dependency('rspec', '~> 3')
  s.add_development_dependency('rubocop')
- s.add_dependency('CFPropertyList', '~> 2.3')
+ s.add_dependency('CFPropertyList', '~> 3')
 end

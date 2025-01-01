@@ -55,6 +55,11 @@ Contributing
 4. Push to the branch (git push origin my-new-feature)
 5. Create a new Pull Request
 
+2.0.1 -2025-01-01
+---
+
++ Changed: Bump dependencies
+
 2.0.0 -2017-09-06
 ---
 
